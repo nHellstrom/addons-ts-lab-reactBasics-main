@@ -1,0 +1,19 @@
+.Userboard {
+    background-color: brown;
+}
+
+.Userboard__button{
+    background-color: darkolivegreen;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.Userboard__button:hover {
+    border-radius: 8px;
+    transform: scale(1.25);
+}
+
+.Userboard__button:active {
+    border-radius: 2px;
+    transform: scale(0.9);
+}
