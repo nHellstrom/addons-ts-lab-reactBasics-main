@@ -76,7 +76,11 @@ interface IUserMetainfo {
     version: string
 }
 
+interface IUserWrapper {
+    user?: IUser
+}
+
 export type {
-    IName,
-    IUser
+    IUser,
+    IUserWrapper
 }

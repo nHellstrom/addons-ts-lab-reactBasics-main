@@ -1,31 +1,23 @@
 table, th, td {
-    border: 1px solid rgba(0, 0, 0, 0.33);
+    /* border: 1px solid rgba(0, 0, 0, 0.33); */
     border-collapse: collapse;
     padding: 0px;
-    
+    margin: 0px;
 }
 
 th {
     width: 300px;
 }
 
-.Userboard__userrow  > th {
-    /* height: 75px; */
-    font-weight: 400;
-}
-
-.Userboard__usercolumn--alignleft {
-    text-align: left;
-    padding-left: 12px;
-}
-
-
 .Userboard {
-    background-color: rgb(113, 182, 187);
+    background-color: #61876E;
+    border-radius: 50px 50px 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.33);
+    margin: 30px 0px;
 }
 
 .Userboard__button{
-    background-color: rgb(160, 19, 85);
+    background-color: #623c49;
     color: white;
     padding: 6px 12px;
     border-radius: 4px;
@@ -48,9 +40,35 @@ th {
 
 .Userboard__user--visible {
     display: block;
-    background-color: rgb(198, 227, 255);
+    background-color: #EAE7B1;
+}
+
+
+.Userboard__tableheaders {
+    height: 40px;
+    background-color: #A6BB8D;
+}
+
+.Userboard__userrow {
+    transition: all 0.1s;
+}
+
+
+.Userboard__userrow:hover {
+    transform: scale(1.03);
+}
+
+
+.Userboard__userrow  > th {
+    font-weight: 400;
+}
+
+.Userboard__usercolumn--alignleft {
+    text-align: left;
+    padding-left: 12px;
 }
 
 .Userboard__userthumbnail {
-    width: 100%;
+    padding: 2px 0px;
+    border-radius: 100%;
 }
