@@ -1,3 +1,17 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    width: 300px;
+}
+
+.Userboard__userrow  > th {
+    height: 75px;
+}
+
+
 .Userboard {
     background-color: brown;
 }
@@ -16,4 +30,16 @@
 .Userboard__button:active {
     border-radius: 2px;
     transform: scale(0.9);
+}
+
+.Userboard__user--hidden {
+    display: none;
+}
+
+.Userboard__user--visible {
+    display: block;
+}
+
+.Userboard__userthumbnail {
+    width: 100%;
 }

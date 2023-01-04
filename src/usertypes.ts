@@ -1,34 +1,34 @@
-type Name = {
+interface IName {
     title: string,
     first: string,
     last: string
 }
 
-type Location = {
-    street: Street,
+interface ILocation {
+    street: IStreet,
     city: string,
     country: string,
     postcode: string,
-    coordinates: Coordinates,
-    timezone: TimeZone
+    coordinates: ICoordinates,
+    timezone: ITimeZone
 }
 
-type Street = {
+interface IStreet {
     number: number,
     name: string
 }
 
-type Coordinates = {
+interface ICoordinates {
     latitude: string,
     longitude: string
 }
 
-type TimeZone = {
+interface ITimeZone {
     offset: string,
     description: string
 }
 
-type Login = {
+interface ILogin {
     uuid: string,
     username: string,
     password: string,
@@ -38,38 +38,38 @@ type Login = {
     sha256: string
 }
 
-type Date = {
+interface IDate {
     date: string,
     age: number
 }
 
-type Id = {
+interface IId {
     name: string,
     value: string
 }
 
-type Picture = {
+interface IPicture {
     large: string,
     medium: string,
     thumbnail: string
 }
 
-type User = {
+interface IUser {
     gender: string,
-    name: Name,
-    location: Location,
+    name: IName,
+    location: ILocation,
     email: string,
-    login: Login,
-    dob: Date,
-    registered: Date,
+    login: ILogin,
+    dob: IDate,
+    registered: IDate,
     phone: string,
     cell: string,
-    id: Id,
-    picture: Picture,
+    id: IId,
+    picture: IPicture,
     nat: string
 }
 
-type UserMetainfo = {
+interface IUserMetainfo {
     seed: string,
     results: number,
     page: number,
@@ -77,6 +77,6 @@ type UserMetainfo = {
 }
 
 export type {
-    Name,
-    User
+    IName,
+    IUser
 }
