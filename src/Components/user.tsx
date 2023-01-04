@@ -1,7 +1,12 @@
 import React from "react";
 import { IUser, IUserWrapper } from '../usertypes.js';
+import './user.css';
 
 const User = (props : IUserWrapper | null) => {
+
+    const editUser = () => {
+        console.log("Beep, I am ", props)
+    }
 
     let renderUser = (data : IUserWrapper | null = null) => {
         if (props?.user != null) {
@@ -12,6 +17,7 @@ const User = (props : IUserWrapper | null) => {
                     <th>{props.user.dob.age} years</th>
                     <th>{props.user.gender == "male" ? "♂️" : "♀️"} {props.user.gender}</th>
                     <th className="Userboard__usercolumn--alignleft">{props.user.location.street.name} {props.user.location.street.number}<br/>{props.user.location.city}<br/>{props.user.location.country}</th>
+                    <th><span className="User__editbutton" onClick={editUser}>Edit</span></th>
                 </tr>
         } else {
             return <p>Null user 🐻</p>
@@ -20,7 +26,6 @@ const User = (props : IUserWrapper | null) => {
 
     return <>
         {renderUser(props)}
-        {console.log("UserCompData: ",props?.user)}
     </>
 }
 

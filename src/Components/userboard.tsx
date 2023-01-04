@@ -9,18 +9,11 @@ const Userboard = () => {
     const [userList, setUserList] = useState<Array<IUser>>([]);
 
     const fetchNewUser = async () => {
-        console.log("Fetch started");
         const response = await fetch ("https://randomuser.me/api/");
         const data = await response.json();
-        console.log("Response: " );
-        
         let person = data.results[0];
-
         setUser(person);
         setUserList([person, ...userList]);
-
-        console.log("User: ", user);
-        console.log("Userlist: ", userList);
     }
 
     return <>
@@ -41,6 +34,7 @@ const Userboard = () => {
                     <th>Age</th>
                     <th>Gender</th>
                     <th>Address</th>
+                    <th></th>
                 </tr>
                 <>
                     {userList.map(el => {

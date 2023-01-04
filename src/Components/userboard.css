@@ -55,7 +55,7 @@ th {
 
 
 .Userboard__userrow:hover {
-    transform: scale(1.03);
+    transform: scale(1.01);
 }
 
 
@@ -72,3 +72,4 @@ th {
     padding: 2px 0px;
     border-radius: 100%;
 }
+

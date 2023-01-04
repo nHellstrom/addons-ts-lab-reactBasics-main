@@ -1,0 +1,17 @@
+.User__editbutton {
+    font-size: smaller;
+    font-weight: bold;
+    color: #623c49;
+    display: inline-block;
+    transition: all 0.1s;
+} 
+
+.User__editbutton:hover {
+    cursor: pointer;
+    transform: scale(1.25);
+} 
+
+.User__editbutton:active {
+    cursor: pointer;
+    transform: scale(0.97);
+} 
