@@ -19,6 +19,8 @@ const Userboard = () => {
         setUser(data.results[0]);
     }
 
+    // TODO: Move individual user data to separate component, and make the site present a list of users.
+    // Each click on the button should add a new one to the top of the list instead of replacing.
 
     return <>
     <div className="Userboard">
@@ -27,7 +29,6 @@ const Userboard = () => {
             <button className="Userboard__button" onClick={fetchNewUser}>Click me!</button>
             <p>Click the button to fetch a random user!</p>
         </div>
-        <hr/>
         <div className="Userboard__BottomPanel">
             <table className={`Userboard__user--${user === null ? "hidden" : "visible"}`}>
                 <tr>
@@ -41,10 +42,10 @@ const Userboard = () => {
                 <tr className='Userboard__userrow'>
                     <th><img className='Userboard__userthumbnail' src={user?.picture.large}></img></th>
                     <th>{user?.login.username}</th>
-                    <th>{user?.name.title} {user?.name.first} {user?.name.last}</th>
+                    <th>{user?.name.title}<br/>{user?.name.first} {user?.name.last}</th>
                     <th>{user?.dob.age}</th>
                     <th>{user?.gender}</th>
-                    <th>{user?.location.street.name} {user?.location.street.number} <br/> {user?.location.city} {user?.location.country}</th>
+                    <th className="Userboard__usercolumn--alignleft">{user?.location.street.name} {user?.location.street.number}<br/>{user?.location.city}<br/>{user?.location.country}</th>
                 </tr>
             </table>
         </div>

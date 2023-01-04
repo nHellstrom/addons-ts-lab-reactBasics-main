@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App__header">
-        <h1>User Shower</h1>
+        <h1>TS API Fetcher</h1>
       </header>
       <main className="App__main">
         <Userboard></Userboard>

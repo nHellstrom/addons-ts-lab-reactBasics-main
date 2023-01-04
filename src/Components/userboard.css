@@ -1,6 +1,8 @@
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.33);
     border-collapse: collapse;
+    padding: 0px;
+    
 }
 
 th {
@@ -8,16 +10,24 @@ th {
 }
 
 .Userboard__userrow  > th {
-    height: 75px;
+    /* height: 75px; */
+    font-weight: 400;
+}
+
+.Userboard__usercolumn--alignleft {
+    text-align: left;
+    padding-left: 12px;
 }
 
 
 .Userboard {
-    background-color: brown;
+    background-color: rgb(113, 182, 187);
 }
 
 .Userboard__button{
-    background-color: darkolivegreen;
+    background-color: rgb(160, 19, 85);
+    color: white;
+    padding: 6px 12px;
     border-radius: 4px;
     transition: all 0.2s;
 }
@@ -38,6 +48,7 @@ th {
 
 .Userboard__user--visible {
     display: block;
+    background-color: rgb(198, 227, 255);
 }
 
 .Userboard__userthumbnail {
