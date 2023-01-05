@@ -1,3 +1,6 @@
+import React from "react";
+
+
 interface IName {
     title: string,
     first: string,
@@ -14,7 +17,7 @@ interface ILocation {
 }
 
 interface IStreet {
-    number: number,
+    number: number | string,
     name: string
 }
 
@@ -77,7 +80,10 @@ interface IUserMetainfo {
 }
 
 interface IUserWrapper {
-    user?: IUser
+    user: IUser,
+    // index: number,
+    // fullUserlist: IUser[],
+    // modifyUserlist: React.Dispatch<React.SetStateAction<IUser[]>>
 }
 
 export type {

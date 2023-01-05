@@ -15,3 +15,20 @@
     cursor: pointer;
     transform: scale(0.97);
 } 
+
+.User__editingform {
+    width: 75px;
+    padding: 3px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #a6bb8d;
+}
+
+.User__editingform--visible {
+    display: inline-block;
+}
+
+.User__editingform--hidden {
+    display: none;
+}
+

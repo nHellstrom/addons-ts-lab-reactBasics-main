@@ -5,15 +5,14 @@ import { IUser } from '../usertypes.js';
 import { User } from "./user";
 
 const Userboard = () => {
-    const [user , setUser]  = useState< null | IUser >(null);
+    // 
     const [userList, setUserList] = useState<Array<IUser>>([]);
 
     const fetchNewUser = async () => {
         const response = await fetch ("https://randomuser.me/api/");
         const data = await response.json();
         let person = data.results[0];
-        setUser(person);
-        setUserList([person, ...userList]);
+        setUserList([...userList, person]);
     }
 
     return <>
@@ -26,7 +25,7 @@ const Userboard = () => {
         </div>
         
         <div className="Userboard__BottomPanel">
-            <table className={`Userboard__user--${user === null ? "hidden" : "visible"}`}>
+            <table className={`Userboard__user--${userList.length === 0 ? "hidden" : "visible"}`}>
                 <tr className='Userboard__tableheaders'>
                     <th>Photo</th>
                     <th>Username</th>
@@ -37,9 +36,10 @@ const Userboard = () => {
                     <th></th>
                 </tr>
                 <>
-                    {userList.map(el => {
+                    {userList.map((el, index) => {
                         return <User user={el}/>
-                    })}
+                        // return <User user={el} index={index} fullUserlist={userList} modifyUserlist={setUserList}/>
+                    })} 
                 </>
             </table>
         </div>
